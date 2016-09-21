@@ -8,17 +8,18 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/home_background"
+    android:background="@drawable/home_background2"
     tools:context="com.centennial.project.eatouteatsafe.MainActivity"
-    android:theme="@android:style/Theme.Light.NoTitleBar">
+    android:theme="@android:style/Theme.Light.NoTitleBar"
+    android:minWidth="60dp">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/headingImgView"
+        android:background="@drawable/home_text"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/home_text"/>
+        android:layout_alignParentEnd="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -28,16 +29,53 @@
         android:maxWidth="40dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:minWidth="200dp"
+        android:minWidth="160dp"
         android:layout_below="@+id/headingImgView"
         android:layout_alignParentStart="true" />
 
-    <ImageView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:background="@drawable/search"
+        android:text="Search"
+        android:id="@+id/searhBtn"
         android:layout_alignTop="@+id/searchEdit"
+        android:background="#3e85f6"
+        android:layout_alignBottom="@+id/searchEdit"
+        android:layout_alignEnd="@+id/headingImgView"
         android:layout_toEndOf="@+id/searchEdit" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Popular"
+        android:id="@+id/popularBtn"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:minWidth="100dp"
+        android:maxWidth="100dp"
+        android:onClick="callListRestaurentActivity"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Allergy"
+        android:id="@+id/allegryBtn"
+        android:layout_below="@+id/popularBtn"
+        android:layout_centerHorizontal="true"
+        android:minWidth="100dp"
+        android:maxWidth="100dp"
+        android:onClick="callListRestaurentActivity"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        android:id="@+id/locationBtn"
+        android:layout_below="@+id/allegryBtn"
+        android:layout_centerHorizontal="true"
+        android:minWidth="100dp"
+        android:maxLength="60"
+        android:maxWidth="100dp"
+        android:onClick="callListRestaurentActivity"/>
 
 </RelativeLayout>
