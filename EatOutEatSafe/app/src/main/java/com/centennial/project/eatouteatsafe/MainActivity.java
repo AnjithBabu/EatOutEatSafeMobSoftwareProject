@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void callListRestaurentActivity(View mainView){
-        Intent listIntent = new Intent (this, ListRestaurentsActivity.class);
+        Intent listIntent = new Intent (this, ListRestaurantsActivity.class);
 
         switch (mainView.getId()) {
             case R.id.popularBtn:
